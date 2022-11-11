@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.overlay-center{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.my-btn:hover{
+    cursor: pointer;
+}
+.living-item-cover, .Dalgarno_Gardens, #Quaker_Estate{
+    display: none;
+}
+.living-item-cover, .Dalgarno_Gardens, .Quaker_Estate{
+    height: 40%;
+    width: 50%;
+}
+.living-item{
+    background-color: white;
+    display: flex;
+}
+.living-content{
+    width: 80%;
+    max-height: 50%;
+    margin: auto;
+}
+.living-content *{
+    width: 50%;
+    height: 80%;
+}
+.points-list *{
+    width: 100%;
+    height: 20%;
+}
+.map-btn{
+    right: 0.5%;
+    top: 10%;
+}
+
+@keyframes sidebar_anim {
+    from {
+        right: -20%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+.sidebar{
+    width: 20%;
+    right: -20%;
+}
+.sidebar ul::-webkit-scrollbar{
+    display: none;
+}
+.sidebar ul li{
+    min-height: 7%;
+    width: 60%;
+    margin: 5% 0;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+}
+.sidebar ul li:hover{
+    cursor: pointer;
+}
+.sidebar ul li p{
+    margin: auto;
+    font-size: 105%;
+    text-align: center;
+}
+
+.sidebar_open{
+    animation: sidebar_anim 0.5s ease 0s 1 normal;
+}
+.sidebar_close{
+    animation: sidebar_anim 0.5s ease 0s 1 reverse;
+}
+
+@keyframes mapshow_anim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.mapshow{
+    display: none;
+    opacity: 0;
+}
+.mapshow::-webkit-scrollbar{
+    display: none;
+}
+.mapshow_open{
+    animation: mapshow_anim 0.5s ease 0s 1 normal;
+}
+.mapshow_close{
+    animation: mapshow_anim 0.5s ease 0s 1 reverse;
+}
+
+#orien_error{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar{
+        width: 25%;
+        right: -25%;
+    }
+    .sidebar ul li{
+        width: 80%;
+    }
+    .sidebar ul li p{
+        font-size: 12px;
+    }
+    .living-item-cover, .Dalgarno_Gardens, .Quaker_Estate{
+        height: 70%;
+        width: 75%;
+    }
+    .map-btn{
+        top: 18%;
+    }
+    .points-list li{
+        font-size: 12px;
+    }
+}
